@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- App data (admissions, leads, HR, marketing state) persists in browser localStorage via `src/lib/local-app-state.ts`, an `app_state`-shaped shim; swap that module for a real table if shared multi-device data is needed, since callers already use the table-style API.

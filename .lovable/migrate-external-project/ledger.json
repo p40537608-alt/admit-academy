@@ -1,0 +1,47 @@
+{
+  "source": "https://github.com/w00769291-a11y/admit-and-academy.git",
+  "capabilities": [
+    {
+      "capability": "code",
+      "source": "TanStack Start app (admission, directors, HR, marketing, finance, academic modules)",
+      "outcome": "copy",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "app data",
+      "source": "app_state shim persisted in browser localStorage (src/lib/local-app-state.ts)",
+      "outcome": "keep browser-local",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "schema",
+      "source": "drizzle profiles table (unused by app code)",
+      "outcome": "not migrated; no app reads/writes",
+      "status": "accepted",
+      "next_action": "enable Cloud only if sign-in is wanted"
+    },
+    {
+      "capability": "auth",
+      "source": "auth attacher only; no sign-in UI or auth calls",
+      "outcome": "none needed",
+      "status": "accepted",
+      "next_action": "none"
+    },
+    {
+      "capability": "secrets",
+      "source": ".env with old backend publishable values",
+      "outcome": "excluded",
+      "status": "accepted",
+      "next_action": "none"
+    },
+    {
+      "capability": "verification",
+      "source": "-",
+      "outcome": "build + route checks",
+      "status": "verified",
+      "next_action": "none"
+    }
+  ]
+}
